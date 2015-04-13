@@ -10,7 +10,7 @@ This is a project containing samples and a basic configuration for unit testing 
 3. [Bower](http://bower.io/#install-bower)
 
 ## Installation
-1. Clone the [git repository]() - `ssh://git@stash.hugeinc.com:7999/ht/js-unit-testing-workshop.git`
+1. Clone the [git repository]() - `https://github.com/lowlander1982/js-unit-testing-workshop`
 2. install npm modules - `npm install`
 3. install bower modules - `bower install`
 
