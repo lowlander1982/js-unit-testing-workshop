@@ -23,5 +23,17 @@ describe('ThirdParty Interface', function() {
       expect(window.jQuery).toHaveBeenCalled();
       expect(jQueryMock.toggleClass).toHaveBeenCalledWith(className);
     });
+
+    it('should throw an exception if no elem is passed', function() {
+      expect(function() {
+        iface.toggleClass();
+      }).toThrow();
+    });
+
+    it('should throw an exception if no class is passed', function() {
+      expect(function() {
+        iface.toggleClass(elem);
+      }).toThrow();
+    });
   });
 });

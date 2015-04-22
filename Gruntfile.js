@@ -51,8 +51,9 @@ module.exports = function (grunt) {
         autoWatch: true
       },
       coverage: {
-        reporters: ['progress', 'coverage'],
-        browsers: ['PhantomJS', 'Chrome', 'Firefox', 'Safari']
+        reporters: ['spec', 'coverage'],
+        //browsers: ['PhantomJS', 'Chrome', 'Safari']
+        browsers: ['PhantomJS']
       }
     },
 

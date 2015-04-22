@@ -118,14 +118,14 @@ describe('The LoadMore module', function () {
 
     it('passes successful responses to the success handler', function () {
       loader.load(trigger.href);
-      jasmine.Ajax.requests.mostRecent().response(jQuery.extend(response, {'status': 200}));
+      jasmine.Ajax.requests.mostRecent().respondWith(jQuery.extend(response, {'status': 200}));
       expect(loader.handleLoadSuccess_).toHaveBeenCalled();
       expect(loader.handleLoadFailure_).not.toHaveBeenCalled();
     });
 
     it('passes unsuccessful responses to the failure handler', function () {
       loader.load(trigger.href);
-      jasmine.Ajax.requests.mostRecent().response(jQuery.extend(response, {'status': 404}));
+      jasmine.Ajax.requests.mostRecent().respondWith(jQuery.extend(response, {'status': 404}));
       expect(loader.handleLoadFailure_).toHaveBeenCalled();
       expect(loader.handleLoadSuccess_).not.toHaveBeenCalled();
     });

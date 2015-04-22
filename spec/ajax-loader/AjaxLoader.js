@@ -38,7 +38,7 @@ describe('AjaxLoader', function() {
         .done(responseHandler.success)
         .fail(responseHandler.fail);
 
-      jasmine.Ajax.requests.mostRecent().response(jQuery.extend(response, {'status': 200}));
+      jasmine.Ajax.requests.mostRecent().respondWith(jQuery.extend(response, {'status': 200}));
 
       expect(responseHandler.success).toHaveBeenCalled();
       expect(responseHandler.fail).not.toHaveBeenCalled();
@@ -49,7 +49,7 @@ describe('AjaxLoader', function() {
         .done(responseHandler.success)
         .fail(responseHandler.fail);
 
-      jasmine.Ajax.requests.mostRecent().response(jQuery.extend(response, {'status': 404}));
+      jasmine.Ajax.requests.mostRecent().respondWith(jQuery.extend(response, {'status': 404}));
 
       expect(responseHandler.success).not.toHaveBeenCalled();
       expect(responseHandler.fail).toHaveBeenCalled();
